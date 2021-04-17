@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #5e5e5e;
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: #e9e9e9;
+    display: flex;
   }
-}
+  
+  .login .loginContainer {
+    padding: 60px;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0.9) 59%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+  }
+  
+  .login .loginContainer label {
+    color: rgb(143, 143, 143);
+    margin: 14px 0;
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+  }
+  
+  .login .loginContainer input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(143, 143, 143, 0.1);
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+  }
+  
+  .login .loginContainer .btnContainer {
+    width: 100%;
+    padding: 24px 0;
+  }
+  
+  .login .loginContainer .btnContainer p {
+    margin: 14px 0 0 0;
+    text-align: right;
+    color: rgb(0, 0, 0);
+  }
+  
+  .login .loginContainer .btnContainer p span {
+    color: rgb(143, 143, 143);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+  }
+  
+  .login .loginContainer .btnContainer p span:hover {
+    color: rgb(99, 99, 99);
+  }
+  
+  .login .loginContainer .errorMsg {
+    color: rgb(255, 103, 103);
+    font-size: 16px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    height: fit-content;
+    padding: 20px;
+
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.5);
+  }
