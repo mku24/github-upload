@@ -3,6 +3,7 @@ import fire from '../fire'
 import styled from 'styled-components'
 import Modal from 'react-modal'
 
+
 import { SidebarContainer, MenuButton, Subheading, ReportFormContainer } from './SidebarElements'
 import Report from './Report'
 import ReportForm from './ReportForm'
@@ -11,6 +12,7 @@ const handleLogout = () => {
     fire.auth().signOut();
 }
 
+
 const Sidebar = ({marker}) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -18,6 +20,8 @@ const Sidebar = ({marker}) => {
 
     return (
         <SidebarContainer>
+
+            
             
             <MenuButton onClick={handleLogout}>
                 Logout

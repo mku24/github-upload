@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import fire from '../fire'
+import Elert from './Elert.png'
 
 import moment from 'moment'
 
@@ -34,6 +35,8 @@ import "@reach/combobox/styles.css";
 
 import mapStyles from "./mapStyles";
 
+import styled from 'styled-components'
+
 const libraries = ["places"];
 
 const mapContainerStyle = {
@@ -51,6 +54,15 @@ const center = {
     lat: -37.813011,
     lng: 144.959825,
 };
+
+const LogoWrapper = styled.img`
+    position: absolute;
+    z-index: 5;
+    top: 0.2rem;
+    left: 1.5rem;
+    height: 120px;
+    align-items: left;
+`
 
 const Alert = () => {
 
@@ -100,8 +112,11 @@ const Alert = () => {
     if (loadError) return "Error";
     if (!isLoaded) return "Loading...";
 
+    
+
     return (
         <> 
+            <LogoWrapper src={Elert} />
             <Sidebar marker={personalMarker}/>
             <Locate 
                 action={() => {
